@@ -37,10 +37,14 @@
   <div class="navbar-brand">
     <a class="nav-link" href="#" id="nav-all">Hack or Snooze</a>
   </div>
+  <div class="main-nav-links hidden">
+    <a class="nav-link" id="nav-submit" href="#">submit</a>
+  </div>
   <div class="nav-right">
     <a class="nav-link" href="#" id="nav-login">login/signup</a>
     <a class="nav-link" href="#" id="nav-user-profile"></a>
     <a class="hidden" id="nav-logout" href="#"><small>(logout)</small></a>
+   
   </div>
 </nav>
 
@@ -94,6 +98,28 @@
     </div>
     <button type="submit">create account</button>
   </form>
+
+  <form
+      action="#"
+      id="story-submit-form"
+      class="account-form hidden"
+      method="post">
+    <h4>Submit a Story</h4>
+    <div class="">
+      <label for="story-title">Title</label>
+      <input id="story-title" autocapitalize="words">
+    </div>
+    <div class="">
+      <label for="story-author">Author</label>
+      <input id="story-author" autocapitalize="words">
+    </div>
+    <div class="">
+      <label for="story-url">url</label>
+      <input id="story-url" autocapitalize="words" type="url" placeholder="https://example.com">
+    </div>
+    <button type="submit">submit story</button>
+  </form>
+
 </section>
 
 <!-- Library JS & our JS -->
