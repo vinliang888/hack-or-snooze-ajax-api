@@ -2,12 +2,16 @@
 
 .stories-list {
   margin: 20px 5px;
+  list-style-position: outside;
 }
 
 .stories-list > li {
   color: gray;
   font-size: 0.8rem;
   margin: 10px 0;
+  border-bottom: 1px solid rgba(194, 194, 194, 0.658);
+  padding: 10px;
+  position: relative;
 }
 
 #stories-loading-msg {
@@ -16,24 +20,49 @@
   margin: 20px 30px;
 }
 
+div.story-details {
+  display: inline-block;
+  margin-left: 40px;
+}
 
 /* Individual stories */
 
 .story-link {
   color: black;
-  font-size: 0.85rem;
-  font-weight: normal;
-  margin: 18px 0;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 6px 0px;
 }
 
 .story-link:hover {
   text-decoration: none;
+  color: blue;
 }
 
 .story-author {
-  margin-left: 2em;
+  margin: 10px 0px;
+  display: block;
+  font-size: 1rem;
+  color: green;
+  font-weight: 700;
 }
 
 .story-user {
-  display: block;
+  display: inline-block;
+  /* margin: 6px 2px; */
+  color: orange;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.favorite-star {
+  display: inline-block;
+  margin: 3px 5px;
+  position:absolute;
+  top: 45%;
+}
+.delete-btn {
+  position: absolute;
+  right: 60px;
+  top: 45%;
 }

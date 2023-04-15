@@ -9,7 +9,8 @@
 function navAllStories(evt) {
   console.debug("navAllStories", evt);
   hidePageComponents();
-  putStoriesOnPage();
+  putStoriesOnPage(allStoryList);
+  currentStoryDisplay = "allStoryList";
 }
 
 $body.on("click", "#nav-all", navAllStories);
@@ -41,3 +42,26 @@ function navSubmitClick(evt) {
   $storySubmitForm.show();
 }
 $navSubmit.on("click", navSubmitClick);
+
+function navFavoritesClick(evt) {
+  console.debug("navFavoritesClick", evt);
+  hidePageComponents();
+  let favoritesStoryList = StoryList.makeStoryListFromList(currentUser.favorites);
+  putStoriesOnPage(favoritesStoryList);
+  currentStoryDisplay = "favoriteStoryList";
+}
+$navFavorites.on("click", navFavoritesClick);
+
+function navMyStoriesClick(evt) {
+  console.debug("navMyStoriesClick", evt);
+
+  if (currentUser.ownStories.length > 0) {
+    hidePageComponents();
+    let myStoriesStoryList = StoryList.makeStoryListFromList(currentUser.ownStories);
+    putStoriesOnPage(myStoriesStoryList);
+    currentStoryDisplay = "myStoryList";
+  } else {
+    alert("No stories to load!");
+  }
+}
+$navMyStories.on("click", navMyStoriesClick);

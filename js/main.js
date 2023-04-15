@@ -6,6 +6,8 @@ const $body = $("body");
 
 const $storiesLoadingMsg = $("#stories-loading-msg");
 const $allStoriesList = $("#all-stories-list");
+let $allFavoriteStars;
+let $allDeleteBtns;
 
 const $loginForm = $("#login-form");
 const $signupForm = $("#signup-form");
@@ -13,8 +15,11 @@ const $storySubmitForm = $("#story-submit-form")
 
 const $navLogin = $("#nav-login");
 const $navSubmit = $("#nav-submit")
+const $navFavorites = $("#nav-favorites")
+const $navMyStories = $("#nav-my-stories")
 const $navUserProfile = $("#nav-user-profile");
 const $navLogOut = $("#nav-logout");
+
 
 
 /** To make it easier for individual components to show just themselves, this

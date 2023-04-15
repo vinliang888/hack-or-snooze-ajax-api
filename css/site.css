@@ -1,4 +1,8 @@
 /* General typography */
+html {
+  background: radial-gradient(#cc7a7a, #addaff);
+  background-repeat: no-repeat;
+}
 
 body {
   font-family: Arimo, sans-serif;
@@ -120,4 +124,8 @@ form > hr {
     max-width: 900px;
     margin: 8px auto;
   }
+}
+
+.icon-btn {
+  cursor: pointer;
 }
