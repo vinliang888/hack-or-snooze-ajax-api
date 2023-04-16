@@ -29,7 +29,7 @@ function generateStoryMarkup(story, favoriteStatus, loggedIn) {
   let hiddenStatus = loggedIn ? "" : "hidden";
   return $(`
       <li id="${story.storyId}">
-        <i class="${favoriteStarStatus} fa-star favorite-star ${hiddenStatus} icon-btn"></i>
+        <i class="${hiddenStatus || `favorite-star ${favoriteStarStatus}`}  fa-star  icon-btn"></i>
         <div class="story-details"><a href="${story.url}" target="a_blank" class="story-link">
           ${story.title}
         </a>
